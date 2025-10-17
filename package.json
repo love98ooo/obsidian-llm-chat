@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-llm-chat",
 	"version": "1.0.0",
 	"description": "Render LLM Chat in Markdown code block",
 	"main": "main.js",
