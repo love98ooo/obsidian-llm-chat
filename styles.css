@@ -1,5 +1,5 @@
 .conversation {
-  margin: 0;
+  margin: 0 0 var(--spacing-lg);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -18,34 +18,12 @@
 
 /* 奇数项：用户消息（第1、3、5...条）- 带avatar */
 .conversation .msg:nth-child(odd) {
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 12px 0 12px 12px;
+  display: block;
+  padding: 0.625rem 1rem 0.625rem 1rem;
+  max-width: 85%;
+  align-self: end;
   border-radius: 8px;
   background: rgba(128, 128, 128, 0.1);
-}
-
-.conversation .msg:nth-child(odd)::before {
-  content: "Me";
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--text-highlight-bg);
-  color: var(--text-normal);
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.conversation .msg:nth-child(odd) > * {
-  margin: 0;
-  padding-right: 12px;
-  flex: 1;
-  border-radius: 8px;
-  max-width: calc(100% - 48px);
 }
 
 /* 偶数项：对方消息（第2、4、6...条）- 正文形式 */
@@ -60,4 +38,10 @@
 .conversation .msg:nth-child(even) > * {
   margin: 0;
   background: transparent;
+}
+
+.conversation .msg * {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  unicode-bidi: plaintext;
 }

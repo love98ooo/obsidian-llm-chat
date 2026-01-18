@@ -1,12 +1,13 @@
 {
 	"name": "obsidian-llm-chat",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Render LLM Chat in Markdown code block",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"install-plugin": "node install.mjs"
 	},
 	"keywords": [],
 	"author": "love98ooo",
